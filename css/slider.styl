@@ -1,0 +1,418 @@
+principal_rojo = #9A0B0B
+principal_amarillo = #EDEA02
+principal_gris = #282828
+div
+  &.sheet-slider
+    background-color #444
+    font-size 16px
+    margin 0 auto
+    overflow hidden
+    position relative
+    width 100%
+    box-shadow 0px 10px 15px black
+    & > div
+      &.conten
+        transition margin-left 0.76s cubic-bezier(0.54, 0, 0.1, 1) 0s
+        -moz-transition margin-left 0.76s cubic-bezier(0.54, 0, 0.1, 1) 0s
+        -ms-transition margin-left 0.76s cubic-bezier(0.54, 0, 0.1, 1) 0s
+        -o-transition margin-left 0.76s cubic-bezier(0.54, 0, 0.1, 1) 0s
+        -webkit-transition margin-left 0.76s cubic-bezier(0.54, 0, 0.1, 1) 0s
+    input
+      display none
+    div
+      &.tab
+        line-height 0
+        display block
+        img
+          width 100%
+        .text
+          left 0
+          line-height 1.4
+          opacity 0
+          padding-left 38px
+          padding-top 60px
+          -webkit-font-smoothing antialiased
+          position absolute
+          text-shadow 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 5px rgba(0, 0, 0, 0.16)
+          top 90px
+          max-width 500px
+          & > span
+            font-size 1em
+          h3
+            font-size 2.12em
+            margin 0
+            overflow inherit
+            text-overflow inherit
+      &.text
+        a
+          color principal_amarillo
+          font-weight bold
+          text-decoration none
+          &:hover
+            color darken(principal_amarillo,15%)
+            text-decoration none
+      &.conten
+        overflow hidden
+        position relative
+        width 100%
+        z-index 600
+        div
+          &.tab
+            float left
+            position relative
+            width 100%
+    .sh-btns
+      bottom 0
+      left 0
+      margin 0 auto
+      position absolute
+      right 0
+      width 90%
+      z-index 700
+      label
+        background-clip content-box
+        background-color rgba(255, 255, 255, 0.5)
+        background-origin content-box
+        cursor pointer
+        display block
+        float left
+        height 8px
+        padding-right 2px
+        width 100%
+        &:last-child
+          padding 0
+        &:hover
+          background-color rgba(255, 255, 255, 0.76)
+    &.n2
+      .sh-btns
+        label
+          width 50%
+      div
+        &.conten
+          width 200%
+          div
+            &.tab
+              width 50%
+    &.n3
+      .sh-btns
+        label
+          width 33.333%
+      div
+        &.conten
+          width 300%
+          div
+            &.tab
+              width 33.333%
+    &.n4
+      .sh-btns
+        label
+          width 25%
+      div
+        &.conten
+          width 400%
+          div
+            &.tab
+              width 25%
+    &.n5
+      .sh-btns
+        label
+          width 20%
+      div
+        &.conten
+          width 500%
+          div
+            &.tab
+              width 20%
+    &.n6
+      .sh-btns
+        label
+          width 16.666%
+      div
+        &.conten
+          width 600%
+          div
+            &.tab
+              width 16.666%
+    &.n7
+      .sh-btns
+        label
+          width 14.285%
+      div
+        &.conten
+          width 700%
+          div
+            &.tab
+              width 14.285%
+    &.n8
+      .sh-btns
+        label
+          width 12.5%
+      div
+        &.conten
+          width 800%
+          div
+            &.tab
+              width 12.5%
+    &.n9
+      .sh-btns
+        label
+          width 11.111%
+      div
+        &.conten
+          width 900%
+          div
+            &.tab
+              width 11.111%
+    &.n10
+      .sh-btns
+        label
+          width 10%
+      div
+        &.conten
+          width 1000%
+          div
+            &.tab
+              width 10%
+    &.n11
+      .sh-btns
+        label
+          width 9.090%
+      div
+        &.conten
+          width 1100%
+          div
+            &.tab
+              width 9.090%
+    &.n12
+      .sh-btns
+        label
+          width 8.333%
+      div
+        &.conten
+          width 1200%
+          div
+            &.tab
+              width 8.333%
+    .sh-arrows
+      height 50px
+      margin 0
+      position absolute
+      right 0
+      top 16%
+      z-index 700
+      label
+        background-clip content-box
+        background-color #fff
+        background-origin content-box
+        background-image url("../img/slider/resource/arrows.png")
+        background-repeat no-repeat
+        box-shadow 1px 1px 2px rgba(0, 0, 0, 0.16)
+        cursor pointer
+        display none
+        height 40px
+        opacity 0.54
+        position relative
+        width 40px
+        &:hover
+          opacity 0.8
+  &.text
+    transition opacity 0.5s ease 0.6s, padding-top 0.5s ease 0.6s
+    -moz-transition opacity 0.5s ease 0.6s, padding-top 0.5s ease 0.6s
+    -webkit-transition opacity 0.5s ease 0.6s, padding-top 0.5s ease 0.6s
+    -o-transition opacity 0.5s ease 0.6s, padding-top 0.5s ease 0.6s
+    -ms-transition opacity 0.5s ease 0.6s, padding-top 0.5s ease 0.6s
+
+.sh-arrows, .sh-btns, .text > span, .text h3
+  transition all 0.5s ease-out 0s
+  -moz-transition all 0.5s ease-out 0s
+  -webkit-transition all 0.5s ease-out 0s
+  -o-transition all 0.5s ease-out 0s
+  -ms-transition all 0.5s ease-out 0s
+
+div.text, .text h3, .text span
+  color #fff
+
+div.sheet-slider, .sh-btns label, div.tab img, div.text
+  -webkit-user-select none
+  -moz-user-select none
+  -ms-user-select none
+  -o-user-select none
+  box-sizing border-box
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+
+.slide
+  &:nth-child(1):checked
+    & ~ div
+      &.conten
+        margin-left 0
+  &:nth-child(2):checked
+    & ~ div
+      &.conten
+        margin-left -100%
+  &:nth-child(3):checked
+    & ~ div
+      &.conten
+        margin-left -200%
+  &:nth-child(4):checked
+    & ~ div
+      &.conten
+        margin-left -300%
+  &:nth-child(5):checked
+    & ~ div
+      &.conten
+        margin-left -400%
+  &:nth-child(6):checked
+    & ~ div
+      &.conten
+        margin-left -500%
+  &:nth-child(7):checked
+    & ~ div
+      &.conten
+        margin-left -600%
+  &:nth-child(8):checked
+    & ~ div
+      &.conten
+        margin-left -700%
+  &:nth-child(9):checked
+    & ~ div
+      &.conten
+        margin-left -800%
+  &:nth-child(10):checked
+    & ~ div
+      &.conten
+        margin-left -900%
+  &:nth-child(11):checked
+    & ~ div
+      &.conten
+        margin-left -1000%
+  &:nth-child(12):checked
+    & ~ div
+      &.conten
+        margin-left -1100%
+
+#s1:checked ~ div.conten div.tab:nth-child(1) .text, 
+#s2:checked ~ div.conten div.tab:nth-child(2) .text, 
+#s3:checked ~ div.conten div.tab:nth-child(3) .text, 
+#s4:checked ~ div.conten div.tab:nth-child(4) .text, 
+#s5:checked ~ div.conten div.tab:nth-child(5) .text, 
+#s6:checked ~ div.conten div.tab:nth-child(6) .text, 
+#s7:checked ~ div.conten div.tab:nth-child(7) .text, 
+#s8:checked ~ div.conten div.tab:nth-child(8) .text, 
+#s9:checked ~ div.conten div.tab:nth-child(9) .text, 
+#s10:checked ~ div.conten div.tab:nth-child(10) .text, 
+#s11:checked ~ div.conten div.tab:nth-child(11) .text, 
+#s12:checked ~ div.conten div.tab:nth-child(12) .text
+  opacity 1
+  padding-top 30px
+
+#s1:checked ~ div.sh-btns label:nth-child(1), 
+#s2:checked ~ div.sh-btns label:nth-child(2), 
+#s3:checked ~ div.sh-btns label:nth-child(3), 
+#s4:checked ~ div.sh-btns label:nth-child(4), 
+#s5:checked ~ div.sh-btns label:nth-child(5), 
+#s6:checked ~ div.sh-btns label:nth-child(6), 
+#s7:checked ~ div.sh-btns label:nth-child(7), 
+#s8:checked ~ div.sh-btns label:nth-child(8), 
+#s9:checked ~ div.sh-btns label:nth-child(9), 
+#s10:checked ~ div.sh-btns label:nth-child(10), 
+#s11:checked ~ div.sh-btns label:nth-child(11), 
+#s12:checked ~ div.sh-btns label:nth-child(12)
+  background-color principal_amarillo
+  box-shadow 0 0 4px #686868
+
+#s1:checked ~ div.sh-arrows label:nth-child(2), 
+#s2:checked ~ div.sh-arrows label:nth-child(3), 
+#s3:checked ~ div.sh-arrows label:nth-child(4), 
+#s4:checked ~ div.sh-arrows label:nth-child(5),
+#s5:checked ~ div.sh-arrows label:nth-child(6),
+#s6:checked ~ div.sh-arrows label:nth-child(7),
+#s7:checked ~ div.sh-arrows label:nth-child(8),
+#s8:checked ~ div.sh-arrows label:nth-child(9),
+#s9:checked ~ div.sh-arrows label:nth-child(10),
+#s10:checked ~ div.sh-arrows label:nth-child(11),
+#s11:checked ~ div.sh-arrows label:nth-child(12),
+div.sheet-slider.n2 #s2:checked ~ div.sh-arrows label:nth-child(1),
+div.sheet-slider.n3 #s3:checked ~ div.sh-arrows label:nth-child(1),
+div.sheet-slider.n4 #s4:checked ~ div.sh-arrows label:nth-child(1),
+div.sheet-slider.n5 #s5:checked ~ div.sh-arrows label:nth-child(1),
+div.sheet-slider.n6 #s6:checked ~ div.sh-arrows label:nth-child(1),
+div.sheet-slider.n7 #s7:checked ~ div.sh-arrows label:nth-child(1),
+div.sheet-slider.n8 #s8:checked ~ div.sh-arrows label:nth-child(1),
+div.sheet-slider.n9 #s9:checked ~ div.sh-arrows label:nth-child(1),
+div.sheet-slider.n10 #s10:checked ~ div.sh-arrows label:nth-child(1),
+div.sheet-slider.n11 #s11:checked ~ div.sh-arrows label:nth-child(1),
+div.sheet-slider.n12 #s12:checked ~ div.sh-arrows label:nth-child(1)
+  background-position -42px 13px
+  display block
+  float right
+  padding-left 2px
+
+div.sheet-slider.n2 #s1:checked ~ div.sh-arrows label:nth-child(2),
+div.sheet-slider.n3 #s1:checked ~ div.sh-arrows label:nth-child(3),
+div.sheet-slider.n4 #s1:checked ~ div.sh-arrows label:nth-child(4),
+div.sheet-slider.n5 #s1:checked ~ div.sh-arrows label:nth-child(5),
+div.sheet-slider.n6 #s1:checked ~ div.sh-arrows label:nth-child(6),
+div.sheet-slider.n7 #s1:checked ~ div.sh-arrows label:nth-child(7),
+div.sheet-slider.n8 #s1:checked ~ div.sh-arrows label:nth-child(8),
+div.sheet-slider.n9 #s1:checked ~ div.sh-arrows label:nth-child(9),
+div.sheet-slider.n10 #s1:checked ~ div.sh-arrows label:nth-child(10),
+div.sheet-slider.n11 #s1:checked ~ div.sh-arrows label:nth-child(11),
+div.sheet-slider.n12 #s1:checked ~ div.sh-arrows label:nth-child(12), 
+#s2:checked ~ div.sh-arrows label:nth-child(1), 
+#s3:checked ~ div.sh-arrows label:nth-child(2), 
+#s4:checked ~ div.sh-arrows label:nth-child(3),
+#s5:checked ~ div.sh-arrows label:nth-child(4),
+#s6:checked ~ div.sh-arrows label:nth-child(5),
+#s7:checked ~ div.sh-arrows label:nth-child(6),
+#s8:checked ~ div.sh-arrows label:nth-child(7),
+#s9:checked ~ div.sh-arrows label:nth-child(8),
+#s10:checked ~ div.sh-arrows label:nth-child(9),
+#s11:checked ~ div.sh-arrows label:nth-child(10),
+#s12:checked ~ div.sh-arrows label:nth-child(11)
+  background-position 15px 13px
+  display block
+  float left
+
+@media only screen and (max-width: 800px)
+  div
+    &.sheet-slider
+      font-size 15.5px
+
+@media only screen and (max-width: 700px)
+  div
+    &.sheet-slider
+      font-size 13px
+      .sh-arrows
+        top 0
+      .sh-btns
+        width 100%
+      .text
+        max-width 400px
+
+@media only screen and (max-width: 600px)
+  div
+    &.sheet-slider
+      div
+        &.tab
+          .text
+            padding-left 30px
+            top -8px
+
+@media only screen and (max-width: 500px)
+  div
+    &.sheet-slider
+      font-size 11px
+      .text
+        max-width 300px
+        & > span
+          opacity 0
+
+@media only screen and (max-width: 460px)
+  div
+    &.sheet-slider
+      .text
+        & > h3
+          opacity 0 !important
+          padding-top 30px !important
+

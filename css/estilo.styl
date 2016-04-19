@@ -1,3 +1,9 @@
+principal_rojo = #9A0B0B
+principal_amarillo = #EDEA02
+principal_gris = #282828
+principal_background = #eddede
+background_amarillo = #EDECDE
+background_gris = #E3DEDE
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video
 	margin 0
 	padding 0
@@ -5,7 +11,90 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font-size 100%
 	font: inherit;
 	vertical-align baseline
+@font-face
+	font-family "tex"
+	src url("../fonts/texgyreadventor-regular.otf")
+@font-face
+	font-family "tex-bold"
+	src url("../fonts/texgyreadventor-bold.otf")
+@font-face
+	font-family "tex-italic"
+	src url("../fonts/texgyreadventor-italic.otf")
+@font-face
+	font-family "tex-bolditalic"
+	src url("../fonts/texgyreadventor-bolditalic.otf")
+body
+	background background_gris
+	font-family "tex"
+	overflow-x hidden
+header
+	display flex 
+	justify-content center
+	margin-top 4em
+	#header_content
+		background principal_gris
+		width 95%
+		height 50px
+		display flex
+		justify-content space-between
+		#logo 
+			background principal_rojo
+			width 180px
+			height 100%
+			img
+				position relative
+				z-index 100000
+				top -120%
+				max-width 100%
+				min-width 180px
+		@media(max-width 800px)
+			nav.desk
+				display none !important
+			nav.mov
+				display block !important
+		nav.mov
+			width auto
+			height 100%
+			display none
+			figure
+				display flex
+				justify-content center
+				align-items center
+				flex-wrap wrap
+				height 100%
+				max-width 100%
+				padding-right 2rem
+				padding-top 2px
+				img
+					max-width 40px
+					max-height 40px
+		nav.desk
+			width 1000px
+			height 100%
+			ul
+				height 100%
+				display flex
+				justify-content space-around
+				align-content center
+				a 
+					color white
+					text-decoration none
+					border-bottom 0px solid transparent
+					transition all .3s
+					&:hover
+						border-bottom 1.5px solid white
+				li 
+					display flex
+					justify-content center
+					align-items center
+					list-style none
+					&.important a 
+						color lighten(principal_rojo,15%)
+						&:hover
+							border-bottom 1.5px solid lighten(principal_rojo,15%)							
 #promote_slider_container
-	background #282828
+	background lighten(principal_gris,20%)
+	background-size cover
 	width 100%
-	height 400px
+	display flex;
+	justify-content center

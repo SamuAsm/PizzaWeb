@@ -2,19 +2,79 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8"/>
-    <title>PizzaSystem</title>
+    <title>Planet Pizza</title>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <meta name="MobileOptimized" content="true"/>
     <meta name="handheldFriendly" content="true"/>
     <link rel="stylesheet" href="css/estilo.css"/>
+    <link rel="stylesheet" href="css/slider.css"/>
+    <script src="js/utilities.js"></script>
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.carousel.js"></script>
+    <style>
+      div.sheet-slider {
+        max-width: 100%;
+        max-height: 500px;
+      }
+    </style>
   </head>
   <body>
+    <header>
+      <div id="header_content">
+        <figure id="logo"> <a href=""><img src="img/logo2.png" alt=""/></a></figure>
+        <nav class="mov">
+          <figure><a href=""><img src="img/icons/taxes-menu-icon.png" alt=""/></a></figure>
+        </nav>
+        <nav class="desk">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Menú</a></li>
+            <li><a href="#">Promociones </a></li>
+            <li><a href="#">Paquetes</a></li>
+            <li><a href="#">Visita el planeta</a></li>
+            <li class="important"><a href="#">Hacer un pedido </a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div id="promote_slider_container">
-      <div class="slide"></div>
-      <div class="slide"></div>
+      <div class="sheet-slider n5">
+        <div class="conten">
+          <div class="tab"><a href="w"><img src="img/slider/slide-img01.jpg"/></a>
+            <div class="text">
+              <h3>2 Weeks</h3><span>Titulo segundario mas un <a href="#">link</a></span>
+            </div>
+          </div>
+          <div class="tab"><a href="w"><img src="img/slider/slide-img02.jpg"/></a>
+            <div class="text">
+              <h3>2 Weeks</h3><span>Titulo segundario mas un <a href="#">link</a></span>
+            </div>
+          </div>
+          <div class="tab"><a href="w"><img src="img/slider/slide-img03.jpg"/></a>
+            <div class="text">
+              <h3>2 Weeks</h3><span>Titulo segundario mas un <a href="#">link</a></span>
+            </div>
+          </div>
+          <div class="tab"><img src="img/slider/slide-img04.jpg"/>
+            <div class="text">
+              <h3>Beautiful Girl</h3><span>Titulo segundario mas un <a href="#">link</a></span>
+            </div>
+          </div>
+          <div class="tab"><img src="img/slider/slide-img05.jpg"/>
+            <div class="text">
+              <h3>Cat and Girl</h3><span>Titulo segundario, solo texto</span>
+            </div>
+          </div>
+          <div class="tab"><img src="img/slider/slide-img05.jpg"/>
+            <div class="text">
+              <h3>Cat and Girl</h3><span>Titulo segundario, solo texto</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
+  <script src="js/slider.js"></script>
 </html>
