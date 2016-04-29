@@ -38,5 +38,5 @@ function next_slide(sh_btns){
     sheet_slider.className = "sheet-slider n" + conten_c_tab.length;
 
 
-    next_slide(document.querySelectorAll(".sh-arrows>label"));
+    //next_slide(document.querySelectorAll(".sh-arrows>label"));
 })();

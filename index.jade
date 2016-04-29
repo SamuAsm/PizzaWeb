@@ -12,23 +12,22 @@ html(lang="es")
     link(rel="stylesheet", href="css/estilo.css")
     link(rel="stylesheet", href="css/slider.css")
     script(src="js/utilities.js")
-    script(src="js/jquery.min.js")
-    script(src="js/jquery.carousel.js")
     style.
       div.sheet-slider {
         max-width: 100%;
-        max-height: 500px;
+        max-height: 400px;
       }
   body
+    nav.movile#movile-nav
     header
       #header_content
         figure#logo 
           a(href=""): img(src="img/logo2.png", alt="")
         nav.mov
           figure
-            a(href=""): img(src="img/icons/taxes-menu-icon.png", alt="")
+            a(href="#" id="nav-button"): img(src="img/icons/taxes-menu-icon.png", alt="")
         nav.desk
-          ul
+          ul#nav-content
             li: a(href="#") Inicio
             li: a(href="#") Menú
             li: a(href="#") Promociones 
@@ -36,44 +35,78 @@ html(lang="es")
             li: a(href="#") Visita el planeta
             li.important: a(href="#") Hacer un pedido 
     #promote_slider_container
+      #pedir-pizza
+        figure
       .sheet-slider.n5
         .conten
           .tab
             a(href="w"): img(src='img/slider/slide-img01.jpg')
             .text
-              h3 2 Weeks
-              span
-                | Titulo segundario mas un 
-                a(href='#') link
+              .costura
+                h3 Con validez
+                span
+                  | hasta agotar existencia
+                  
           .tab
             a(href="w"): img(src='img/slider/slide-img02.jpg')
             .text
-              h3 2 Weeks
-              span
-                | Titulo segundario mas un 
-                a(href='#') link
+              .costura
+                h3 Valido
+                span
+                  | del 15 al 24 de Abril
           .tab
             a(href="w"): img(src='img/slider/slide-img03.jpg')
             .text
-              h3 2 Weeks
-              span
-                | Titulo segundario mas un 
-                a(href='#') link
+              .costura
+                h3 Por solo $98
+                span Valido de lunes a miercoles
           .tab
             img(src='img/slider/slide-img04.jpg')
             .text
-              h3 Beautiful Girl
-              span
-                | Titulo segundario mas un 
-                a(href='#') link
+              .imagen_slide.center
+                figure:  img(src="img/slider/auxiliar/moto-pizza.png", alt="", style="width:400px; margin-top:-40px")
           .tab
             img(src='img/slider/slide-img05.jpg')
             .text
-              h3 Cat and Girl
-              span Titulo segundario, solo texto
+              .costura
+                h3 Cat and Girl
+                span Titulo segundario, solo texto
           .tab
-            img(src='img/slider/slide-img05.jpg')
+            img(src='img/slider/slide-img06.jpg')
             .text
-              h3 Cat and Girl
-              span Titulo segundario, solo texto
+              .costura
+                h3 Cat and Girl
+                span Titulo segundario, solo texto
+    section
+      #main
+        div#favs
+          div.title
+            h2 Recomendados
+          figure
+            img(src="img/slider/slide-img06.jpg", alt="")
+          figure
+            img(src="img/slider/slide-img05.jpg", alt="")
+          figure
+            img(src="img/slider/slide-img03.jpg", alt="")
+        figure#ordenar_ahora
+          img(src="img/ordena_ahora.png", alt="")
+        #maps(style="width:750px;height:250px;")
+          #googleMap
+        .banner(style="width:230px;margin:0 35px;")
+          img(src="img/banner/principal.png")
+    footer
+      #footer_content
+        div
+          span Numero telefonico
+          div.phone-number 55-2343-1232
   script(src="js/slider.js")
+  script.
+    (function(){
+      document.querySelector("#movile-nav").innerHTML = "<ul>"+document.querySelector("#nav-content").innerHTML+"</ul>";
+    })();
+    document.querySelector("#nav-button").addEventListener("click", function(){
+      if(document.querySelector("#movile-nav").className == "movile active") 
+        document.querySelector("#movile-nav").className = "movile";
+      else
+        document.querySelector("#movile-nav").className = "movile active";
+    });

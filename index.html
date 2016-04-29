@@ -11,24 +11,23 @@
     <link rel="stylesheet" href="css/estilo.css"/>
     <link rel="stylesheet" href="css/slider.css"/>
     <script src="js/utilities.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.carousel.js"></script>
     <style>
       div.sheet-slider {
         max-width: 100%;
-        max-height: 500px;
+        max-height: 400px;
       }
     </style>
   </head>
   <body>
+    <nav id="movile-nav" class="movile"></nav>
     <header>
       <div id="header_content">
         <figure id="logo"> <a href=""><img src="img/logo2.png" alt=""/></a></figure>
         <nav class="mov">
-          <figure><a href=""><img src="img/icons/taxes-menu-icon.png" alt=""/></a></figure>
+          <figure><a href="#" id="nav-button"><img src="img/icons/taxes-menu-icon.png" alt=""/></a></figure>
         </nav>
         <nav class="desk">
-          <ul>
+          <ul id="nav-content">
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Menú</a></li>
             <li><a href="#">Promociones </a></li>
@@ -40,41 +39,91 @@
       </div>
     </header>
     <div id="promote_slider_container">
+      <div id="pedir-pizza">
+        <figure></figure>
+      </div>
       <div class="sheet-slider n5">
         <div class="conten">
           <div class="tab"><a href="w"><img src="img/slider/slide-img01.jpg"/></a>
             <div class="text">
-              <h3>2 Weeks</h3><span>Titulo segundario mas un <a href="#">link</a></span>
+              <div class="costura">
+                <h3>Con validez</h3><span>hasta agotar existencia</span>
+              </div>
             </div>
           </div>
           <div class="tab"><a href="w"><img src="img/slider/slide-img02.jpg"/></a>
             <div class="text">
-              <h3>2 Weeks</h3><span>Titulo segundario mas un <a href="#">link</a></span>
+              <div class="costura">
+                <h3>Valido</h3><span>del 15 al 24 de Abril</span>
+              </div>
             </div>
           </div>
           <div class="tab"><a href="w"><img src="img/slider/slide-img03.jpg"/></a>
             <div class="text">
-              <h3>2 Weeks</h3><span>Titulo segundario mas un <a href="#">link</a></span>
+              <div class="costura">
+                <h3>Por solo $98</h3><span>Valido de lunes a miercoles</span>
+              </div>
             </div>
           </div>
           <div class="tab"><img src="img/slider/slide-img04.jpg"/>
             <div class="text">
-              <h3>Beautiful Girl</h3><span>Titulo segundario mas un <a href="#">link</a></span>
+              <div class="imagen_slide center">
+                <figure><img src="img/slider/auxiliar/moto-pizza.png" alt="" style="width:400px; margin-top:-40px"/></figure>
+              </div>
             </div>
           </div>
           <div class="tab"><img src="img/slider/slide-img05.jpg"/>
             <div class="text">
-              <h3>Cat and Girl</h3><span>Titulo segundario, solo texto</span>
+              <div class="costura">
+                <h3>Cat and Girl</h3><span>Titulo segundario, solo texto</span>
+              </div>
             </div>
           </div>
-          <div class="tab"><img src="img/slider/slide-img05.jpg"/>
+          <div class="tab"><img src="img/slider/slide-img06.jpg"/>
             <div class="text">
-              <h3>Cat and Girl</h3><span>Titulo segundario, solo texto</span>
+              <div class="costura">
+                <h3>Cat and Girl</h3><span>Titulo segundario, solo texto</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <section>
+      <div id="main">
+        <div id="favs">
+          <div class="title">
+            <h2>Recomendados</h2>
+          </div>
+          <figure><img src="img/slider/slide-img06.jpg" alt=""/></figure>
+          <figure><img src="img/slider/slide-img05.jpg" alt=""/></figure>
+          <figure><img src="img/slider/slide-img03.jpg" alt=""/></figure>
+        </div>
+        <figure id="ordenar_ahora"><img src="img/ordena_ahora.png" alt=""/></figure>
+        <div id="maps" style="width:750px;height:250px;">
+          <div id="googleMap"></div>
+        </div>
+        <div style="width:230px;margin:0 35px;" class="banner"><img src="img/banner/principal.png"/></div>
+      </div>
+    </section>
+    <footer>
+      <div id="footer_content">
+        <div><span>Numero telefonico</span>
+          <div class="phone-number">55-2343-1232</div>
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="js/slider.js"></script>
+  <script>
+    (function(){
+      document.querySelector("#movile-nav").innerHTML = "<ul>"+document.querySelector("#nav-content").innerHTML+"</ul>";
+    })();
+    document.querySelector("#nav-button").addEventListener("click", function(){
+      if(document.querySelector("#movile-nav").className == "movile active") 
+        document.querySelector("#movile-nav").className = "movile";
+      else
+        document.querySelector("#movile-nav").className = "movile active";
+    });
+  </script>
 </html>
