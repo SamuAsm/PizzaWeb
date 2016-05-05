@@ -5,6 +5,10 @@ principal_gris = #282828
 principal_background = #eddede
 background_amarillo = #EDECDE
 background_gris = #E3DEDE
+a 
+	color principal_azul
+.opac
+	opacity .6
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video
 	margin 0
 	padding 0
@@ -12,6 +16,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font-size 100%
 	font: inherit;
 	vertical-align baseline
+b 
+	font-weight 600
 @font-face
 	font-family "tex"
 	src url("../fonts/texgyreadventor-regular.otf")
@@ -56,6 +62,33 @@ nav.movile
 		height auto
 		max-height 200vh
 		padding 3em 0 1em 0
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover
+	background principal_rojo !important
+	color white !important
+.ac-art 
+	label
+		display flex !important
+		justify-content space-between !important
+		max-width 100%
+	article
+		display flex 
+		flex-wrap wrap 
+		justify-content center
+		.bloc
+			padding 2em
+			width 250px
+			//border 1px solid black
+			span.title
+				text-decoration underline
+				margin-left -10px
+			figure, img 
+				max-width 100%
+				max-height 100%
+		ul 
+			margin-bottom 1em
+			li 
+				list-style none
 #pedir-pizza
 	position absolute
 	z-index 100001
@@ -140,6 +173,47 @@ header
 						color lighten(principal_rojo,15%)
 						&:hover
 							border-bottom 1.5px solid lighten(principal_rojo,15%)	
+section.admin-panel
+	background white
+	min-height 30em
+	box-shadow 0 3px 15px rgba(0,0,0,.7)
+	justify-content space-between
+	.admin-panel-nav
+		background lighten(principal_gris, -20%)
+		min-height 100%
+		width 310px
+		padding-top 50px
+		text-align center
+		@media (max-width 900px)
+			display none
+		ul
+			color white
+			padding-bottom 15px
+			h3
+				font-size 1.3em
+			li 
+				background linear-gradient(principal_gris, principal_gris, lighten(principal_gris, 4%))
+				min-height 2.5em
+				display flex 
+				align-items center
+				justify-content center
+				transition all .5s
+				cursor pointer
+				color background_gris
+				border 1px solid lighten(principal_gris, 7%)
+				&:hover 
+					background lighten(principal_gris, 5%)
+	.admin-panel-content
+		background white
+		min-height 100%
+		width 100%
+		padding 3%
+		h1
+			font-size 2em
+			small 
+				font-size .5em 
+				color lighten(principal_gris,35%)
+				margin-left .5em
 footer
 	width 100%
 	display flex 
@@ -289,5 +363,3 @@ section
 					img
 						border-radius 15px
 						transform scale(1.2) rotate(10deg)
-					
-	

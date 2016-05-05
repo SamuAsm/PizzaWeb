@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Planet Pizza
+    meta(name="description", content="")
+    meta(name="author", content="")
+    meta(name="viewport", content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no")
+    meta(name="MobileOptimized", content="true")
+    meta(name="handheldFriendly", content="true")
+
+    link(rel="stylesheet", href="css/estilo.css")
+    link(rel="stylesheet", href="css/style.css")
+    script(src="js/claw.js")
+    style.
+      div.sheet-slider {
+        max-width: 100%;
+        max-height: 400px;
+      }
+  body
+    nav.movile#movile-nav
+    header
+      #header_content
+        figure#logo 
+          a: img(src="img/logo2.png", alt="")
+        nav.mov
+          figure
+            a(href="#" id="nav-button"): img(src="img/icons/taxes-menu-icon.png", alt="")
+        //nav.desk
+          ul#nav-content
+            li: a(href="#") Inicio
+            li: a(href="#") Menú
+            li: a(href="#") Promociones 
+            li: a(href="#") Paquetes
+            li: a(href="#") Visita el planeta
+            li.important: a(href="#") Hacer un pedido 
+    section.admin-panel
+      .admin-panel-nav#nav-content
+        ul 
+          a: li Ordenes
+          a: li Viajes
+          a: li Historial
+          a: li Clientes
+          a: li Menú / Carta
+          a: li Edición de pagina
+        ul 
+          h3 Vistas
+          a: li Repartidores
+          a: li Cocineros
+      .admin-panel-content
+        h1 Ordenes
+          small 12 ordenes en proceso de entrega
+        .ac-container
+          .ac-art(data-order="9876")
+            input#ac-1(name="accordion-1" type="radio")
+            label(for="ac-1") 
+              span Orden #9876
+              span tiempo restante: 29:42
+            article
+              .bloc
+                ul
+                  span.title Datos Orden
+                  li: b ::Pizza:: $90
+                  li Especialidad: Personalizada
+                  li Tamaño: Mediana
+                  li Cantidad: 1
+                  li Tipo masa: Orilla de queso
+                  li: b Ingredientes_
+                  li Mitad 1: Peperoni, Piña
+                  li Mitad 2: Champiñones, Carne molida
+                  br
+                  li: b ::Pizza2:: $120
+                  li Especialidad: Peperonicima
+                  li Tamaño: Grande
+                  li Cantidad: 1
+                  li Tipo masa: Orilla de queso
+                  br
+                  li: b ::Extras:: 
+                  li 1 Cocacola 3 litros $35
+                  li 1 Papas locas $65
+                  li 2 Salsa especial $12 
+              .bloc
+                ul 
+                  span.title Datos Generales
+                  li Cliente: Alejandro Hernandez
+                  li Correo: alexxh42@gmail.com
+                  li Telefono: 55 7643 234 
+                  li Direccion: Paseo de la reforma
+                  li Puntos acumulados: 140p
+                  li No. Pedidos: 10
+                  li Estado: Cocinando
+                  li Viaje: 
+                    a(href="#") #650
+                  li Total: $340 
+                ul 
+                  span.title Anotaciones
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, hic esse architecto ex illum aliquam. Adipisci accusamus sapiente qui, ad dolor repellendus illo veniam. Fuga ad est recusandae blanditiis rem?               
+          .ac-art(data-order="9877")
+            input#ac-2(name="accordion-1" type="radio")
+            label(for="ac-2") 
+              span Orden #9877
+              span tiempo restante: 29:42
+            article
+              p Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.
+
+  script.
+    (function(){
+      document.querySelector("#movile-nav").innerHTML = "<ul>"+document.querySelector("#nav-content").innerHTML+"</ul>";
+    })();
+    document.querySelector("#nav-button").addEventListener("click", function(){
+      if(document.querySelector("#movile-nav").className == "movile active") 
+        document.querySelector("#movile-nav").className = "movile";
+      else
+        document.querySelector("#movile-nav").className = "movile active";
+    });
+  script.
+
+    claw.claw_config("js/config.claw");
+    //claw.$include('pages.ordenes.*');
+    claw.pageError404(function(){
+      console.log("Esa orden no existe");
+    });
+    claw.searchAll("[data-order]").iterate(function(i, orden){
+      orden.addEventListener("click",function(){
+        location.hash = "#/"+orden.dataset.order;
+      })
+      claw.page("/"+orden.dataset.order, null, function(){
+        claw.search("[data-order='"+orden.dataset.order+"'] > input[type='radio']").checked = true;
+        console.log(orden.dataset.order)
+      })
+    });
