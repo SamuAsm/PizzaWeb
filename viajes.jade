@@ -58,13 +58,13 @@ html(lang="es")
           a: li Cofiguración
           a: li Cerrar sesión
       .admin-panel-content
-        h1 Ordenes
-          small 12 ordenes en proceso de entrega
+        h1 Viajes
+          small 12 viajes en proceso
         .ac-container
-          .ac-art(data-order="9876")
+          .ac-art(data-travel="9876")
             input#ac-1(name="accordion-1" type="radio")
             label(for="ac-1") 
-              span Orden #9876
+              span Viaje #9876
               span tiempo restante: 29:42
             article
               .bloc
@@ -105,13 +105,13 @@ html(lang="es")
                 ul 
                   span.title Anotaciones
                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, hic esse architecto ex illum aliquam. Adipisci accusamus sapiente qui, ad dolor repellendus illo veniam. Fuga ad est recusandae blanditiis rem?               
-          .ac-art(data-order="9877")
+          .ac-art(data-travel="9877")
             input#ac-2(name="accordion-1" type="radio")
             label(for="ac-2") 
-              span Orden #9877
+              span Viaje #9877
               span tiempo restante: 29:42
             article
-              p Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.
+              p Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not travel, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.
 
   script.
     (function(){
@@ -126,16 +126,16 @@ html(lang="es")
   script.
 
     claw.claw_config("js/config.claw");
-    //claw.$include('pages.ordenes.*');
+    //claw.$include('pages.viajes.*');
     claw.pageError404(function(){
-      console.log("Esa orden no existe");
+      console.log("Esa viaje no existe");
     });
-    claw.searchAll("[data-order]").iterate(function(i, orden){
-      orden.addEventListener("click",function(){
-        location.hash = "#/"+orden.dataset.order;
+    claw.searchAll("[data-travel]").iterate(function(i, viaje){
+      viaje.addEventListener("click",function(){
+        location.hash = "#/"+viaje.dataset.travel;
       })
-      claw.page("/"+orden.dataset.order, null, function(){
-        claw.search("[data-order='"+orden.dataset.order+"'] > input[type='radio']").checked = true;
-        console.log(orden.dataset.order)
+      claw.page("/"+viaje.dataset.travel, null, function(){
+        claw.search("[data-travel='"+viaje.dataset.travel+"'] > input[type='radio']").checked = true;
+        console.log(viaje.dataset.travel)
       })
     });
