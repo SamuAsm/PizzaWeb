@@ -100,6 +100,8 @@
                   <li>Direccion: Paseo de la reforma</li>
                   <li>Puntos acumulados: 140p</li>
                   <li>No. Pedidos: 10</li>
+                  <li>Fecha pedido: 11/05/2016</li>
+                  <li>Hora pedido: 08:21pm</li>
                   <li>Estado: Cocinando</li>
                   <li>Viaje: <a href="#">#650</a></li>
                   <li>Total: $340 </li>
@@ -138,7 +140,7 @@
     claw.pageError404(function(){
       console.log("Esa orden no existe");
     });
-    claw.searchAll("[data-order]").iterate(function(i, orden){
+    claw.forEach(claw.searchAll("[data-order]"),function(i, orden){
       orden.addEventListener("click",function(){
         location.hash = "#/"+orden.dataset.order;
       })

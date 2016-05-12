@@ -17,12 +17,12 @@ forEach(area, function (index, input) {
 */
 
 //Itera en un array incluidos los arreglos compuestos por nodos obtenidos del DOM
-Object.prototype.each = function(callback, scope){
+/*Object.prototype.each = function(callback, scope){
 	if(!this.length) throw new TypeError((typeof this) + " isn't an Array, it is not possible to iterate.");
 	for (var i = 0; i < this.length; i++){
 		callback.call(scope, i, this[i]);
 	}
-}
+}*/
 //EJEMPLO DE USO
 /*
 var all_a = document.querySelectorAll("a")

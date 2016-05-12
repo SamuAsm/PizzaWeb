@@ -31,7 +31,7 @@ var claw = {
 				else{
 					$$404_RETURN_FUNCTION$$.call();
 				}
-				$claw.$$CLAW_PAGES$$.iterate(function(index, $PAGE_ITERATION_OBJECT_9823){
+				claw.forEach($claw.$$CLAW_PAGES$$,function(index, $PAGE_ITERATION_OBJECT_9823){
 					$claw.$$HISTORY_CLAW_PAGES$$[$PAGE_ITERATION_OBJECT_9823] = false;
 				});
 			}
@@ -64,13 +64,13 @@ var claw = {
 					if(modules instanceof Function) modules.call(this);
 				}
 				else {
-					modules.iterate(function(i, module){
+					claw.forEach(modules,function(i, module){
 						if(module instanceof Function) module.call(this);
 					});
 				}
 				callback.call(this);
 
-				$claw.$$CLAW_PAGES$$.iterate(function(index, $PAGE_ITERATION_OBJECT_9823){
+				claw.forEach($claw.$$CLAW_PAGES$$,function(index, $PAGE_ITERATION_OBJECT_9823){
 					$claw.$$HISTORY_CLAW_PAGES$$[$PAGE_ITERATION_OBJECT_9823] = false;
 				});
 				$claw.$$HISTORY_CLAW_PAGES$$[newhash] = true;
@@ -165,10 +165,10 @@ var claw = {
 		{
 			var doms = [];
 			var index = 0;
-			query.iterate(function(i,o){
+			claw.forEach(query,function(i,o){
 				var it = claw.grlsrch(o);
 				if(it instanceof Array){
-					it.iterate(function(i2,item){
+					claw.forEach(it,function(i2,item){
 						doms[index++] = item;
 					})
 				}
@@ -317,12 +317,12 @@ all_a.iterate(function(ind, obj){
 	console.log(ind)
 });
 */
-Object.prototype.iterate = function(callback, scope){
+/*Object.prototype.iterate = function(callback, scope){
 	if(!this.length) throw new TypeError((typeof this) + " isn't an Array, it is not possible to iterate.");
 	for (var i = 0; i < this.length; i++){
 		callback.call(scope, i, this[i])
 	}
-}
+}*/
 
 //Remplaza todas las coincidencias en un String
 //"hola amigo".replaceAll("a","o")  =>  holo omigo
