@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Planet Pizza</title>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="MobileOptimized" content="true"/>
+    <meta name="handheldFriendly" content="true"/>
+    <link rel="stylesheet" href="css/estilo.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/claw.js"></script>
+    <style>
+      div.sheet-slider {
+        max-width: 100%;
+        max-height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="movile-nav" class="movile"></nav>
+    <header>
+      <div id="header_content">
+        <figure id="logo"> <a><img src="img/logo2.png" alt=""/></a></figure>
+        <nav class="mov">
+          <figure><a href="#" id="nav-button"><img src="img/icons/taxes-menu-icon.png" alt=""/></a></figure>
+        </nav>
+        <!--nav.desk
+        ul#nav-content
+          li: a(href="#") Inicio
+          li: a(href="#") Menú
+          li: a(href="#") Promociones 
+          li: a(href="#") Paquetes
+          li: a(href="#") Visita el planeta
+          li.important: a(href="#") Hacer un pedido 
+        -->
+      </div>
+    </header>
+    <section class="admin-panel">
+      <div id="nav-content" class="admin-panel-nav">
+        <ul><a>
+            <li>Punto de venta</li></a></ul>
+        <ul> 
+          <h3>Administración</h3><a>
+            <li>Ordenes</li></a><a>
+            <li>Viajes</li></a><a>
+            <li>Historial</li></a><a>
+            <li>Clientes</li></a><a>
+            <li>Existencias</li></a><a>
+            <li>Menú / Carta</li></a><a>
+            <li>Edición de pagina</li></a>
+        </ul>
+        <ul> 
+          <h3>Vistas</h3><a>
+            <li>Repartidores</li></a><a>
+            <li>Cocineros</li></a>
+        </ul>
+        <ul> 
+          <h3>Configuración</h3><a>
+            <li>Usuarios</li></a><a>
+            <li>Empleados</li></a><a>
+            <li>Cofiguración</li></a><a>
+            <li>Cerrar sesión</li></a>
+        </ul>
+      </div>
+      <div class="admin-panel-content">
+        <h1>Ordenes<small>12 ordenes en proceso de entrega</small></h1>
+        <div class="ac-container">
+          <div data-order="9876" class="ac-art">
+            <input id="ac-1" name="accordion-1" type="radio"/>
+            <label for="ac-1"> <span>Orden #9876</span><span>tiempo restante: 29:42</span></label>
+            <article>
+              <div class="bloc">
+                <ul><span class="title">Datos Orden</span>
+                  <li><b>::Pizza:: $90</b></li>
+                  <li>Especialidad: Personalizada</li>
+                  <li>Tamaño: Mediana</li>
+                  <li>Cantidad: 1</li>
+                  <li>Tipo masa: Orilla de queso</li>
+                  <li><b>Ingredientes_</b></li>
+                  <li>Mitad 1: Peperoni, Piña</li>
+                  <li>Mitad 2: Champiñones, Carne molida</li><br/>
+                  <li><b>::Pizza2:: $120</b></li>
+                  <li>Especialidad: Peperonicima</li>
+                  <li>Tamaño: Grande</li>
+                  <li>Cantidad: 1</li>
+                  <li>Tipo masa: Orilla de queso</li><br/>
+                  <li><b>::Extras:: </b></li>
+                  <li>1 Cocacola 3 litros $35</li>
+                  <li>1 Papas locas $65</li>
+                  <li>2 Salsa especial $12 </li>
+                </ul>
+              </div>
+              <div class="bloc">
+                <ul> <span class="title">Datos Generales</span>
+                  <li>Cliente: Alejandro Hernandez</li>
+                  <li>Correo: alexxh42@gmail.com</li>
+                  <li>Telefono: 55 7643 234 </li>
+                  <li>Direccion: Paseo de la reforma</li>
+                  <li>Puntos acumulados: 140p</li>
+                  <li>No. Pedidos: 10</li>
+                  <li>Fecha pedido: 11/05/2016</li>
+                  <li>Hora pedido: 08:21pm</li>
+                  <li>Estado: Cocinando</li>
+                  <li>Viaje: <a href="#">#650</a></li>
+                  <li>Total: $340 </li>
+                </ul>
+                <ul> <span class="title">Anotaciones</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, hic esse architecto ex illum aliquam. Adipisci accusamus sapiente qui, ad dolor repellendus illo veniam. Fuga ad est recusandae blanditiis rem?               </p>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div data-order="9877" class="ac-art">
+            <input id="ac-2" name="accordion-1" type="radio"/>
+            <label for="ac-2"> <span>Orden #9877</span><span>tiempo restante: 29:42</span></label>
+            <article>
+              <p>Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    (function(){
+      document.querySelector("#movile-nav").innerHTML = "<ul>"+document.querySelector("#nav-content").innerHTML+"</ul>";
+    })();
+    document.querySelector("#nav-button").addEventListener("click", function(){
+      if(document.querySelector("#movile-nav").className == "movile active") 
+        document.querySelector("#movile-nav").className = "movile";
+      else
+        document.querySelector("#movile-nav").className = "movile active";
+    });
+  </script>
+  <script>
+    claw.claw_config("js/config.claw");
+    //claw.$include('pages.ordenes.*');
+    claw.pageError404(function(){
+      console.log("Esa orden no existe");
+    });
+    claw.forEach(claw.searchAll("[data-order]"),function(i, orden){
+      orden.addEventListener("click",function(){
+        location.hash = "#/"+orden.dataset.order;
+      })
+      claw.page("/"+orden.dataset.order, null, function(){
+        claw.search("[data-order='"+orden.dataset.order+"'] > input[type='radio']").checked = true;
+        console.log(orden.dataset.order)
+      })
+    });
+  </script>
+</html>

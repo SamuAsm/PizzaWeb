@@ -1,0 +1,3 @@
+// Configura los alias de js para utilizarse con el claw.$include
+$$LIBRARY_CONFIG_URL$$ = [];
+$$LIBRARY_CONFIG_URL$$['pages.ordenes.*'] = "js/ordenes.js";

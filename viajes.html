@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Planet Pizza</title>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="MobileOptimized" content="true"/>
+    <meta name="handheldFriendly" content="true"/>
+    <link rel="stylesheet" href="css/estilo.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/claw.js"></script>
+    <style>
+      div.sheet-slider {
+        max-width: 100%;
+        max-height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="movile-nav" class="movile"></nav>
+    <header>
+      <div id="header_content">
+        <figure id="logo"> <a><img src="img/logo2.png" alt=""/></a></figure>
+        <nav class="mov">
+          <figure><a href="#" id="nav-button"><img src="img/icons/taxes-menu-icon.png" alt=""/></a></figure>
+        </nav>
+        <nav class="desk">
+          <h4>Sucursal Vallejo</h4>
+          <ul id="nav-content">
+            <li>Sucursal vallejo</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="admin-panel">
+      <div id="nav-content" class="admin-panel-nav">
+        <ul><a>
+            <li>Punto de venta</li></a></ul>
+        <ul> 
+          <h3>Administración</h3><a>
+            <li>Ordenes</li></a><a>
+            <li>Viajes</li></a><a>
+            <li>Historial</li></a><a>
+            <li>Clientes</li></a><a>
+            <li>Existencias</li></a><a>
+            <li>Menú / Carta</li></a><a>
+            <li>Edición de pagina</li></a>
+        </ul>
+        <ul> 
+          <h3>Vistas</h3><a>
+            <li>Repartidores</li></a><a>
+            <li>Cocineros</li></a>
+        </ul>
+        <ul> 
+          <h3>Configuración</h3><a>
+            <li>Usuarios</li></a><a>
+            <li>Empleados</li></a><a>
+            <li>Cofiguración</li></a><a>
+            <li>Cerrar sesión</li></a>
+        </ul>
+      </div>
+      <div class="admin-panel-content">
+        <h1>Viajes<small>12 viajes en proceso</small></h1>
+        <div class="ac-container">
+          <div data-travel="9876" class="ac-art">
+            <input id="ac-1" name="accordion-1" type="radio"/>
+            <label for="ac-1"> <span>Viaje #9876</span><span>tiempo restante: 29:42</span></label>
+            <article>
+              <div class="bloc">
+                <ul><span class="title">Datos Viaje</span>
+                  <li><b>::<a href="#">Orden #621</a>:: $ 150</b></li>
+                  <li><b>Contenido</b></li>
+                  <li>1 Pizzas $100</li>
+                  <li>1 Papas locas $20</li>
+                  <li>1 Refresco Grande</li>
+                  <li><b>Direccion</b></li>
+                  <li>Wilfrido Masseau #123</li><br/>
+                  <li><b>::<a href="#">Orden #623</a>:: $ 150</b></li>
+                  <li><b>Contenido</b></li>
+                  <li>1 Pizzas $100</li>
+                  <li>1 Papas locas $20</li>
+                  <li>1 Refresco Grande</li>
+                  <li><b>Direccion</b></li>
+                  <li>Wilfrido Masseau #123</li><br/>
+                  <li><b>::<a href="#">Orden #621</a>:: $ 150</b></li>
+                  <li><b>Contenido</b></li>
+                  <li>1 Pizzas $100</li>
+                  <li>1 Papas locas $20</li>
+                  <li>1 Refresco Grande</li>
+                  <li><b>Direccion</b></li>
+                  <li>Wilfrido Masseau #123</li>
+                </ul>
+              </div>
+              <div class="bloc">
+                <ul> <span class="title">Datos Generales</span>
+                  <li>Repartidor: No asignado (<a href="#">Asignar repartidor</a>)</li>
+                  <li>Estado viaje: En espera</li>
+                  <li>Total en viaje: $450</li>
+                  <li>Dinero en cambio: $500</li>
+                </ul>
+                <ul> <span class="title">Ruta de viaje</span>
+                  <figure><img src="img/Google-Maps-Chile.gif" alt=""/></figure>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div data-travel="9877" class="ac-art">
+            <input id="ac-2" name="accordion-1" type="radio"/>
+            <label for="ac-2"> <span>Viaje #9877</span><span>tiempo restante: 29:42</span></label>
+            <article>
+              <p>Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not travel, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    (function(){
+      document.querySelector("#movile-nav").innerHTML = "<ul>"+document.querySelector("#nav-content").innerHTML+"</ul>";
+    })();
+    document.querySelector("#nav-button").addEventListener("click", function(){
+      if(document.querySelector("#movile-nav").className == "movile active") 
+        document.querySelector("#movile-nav").className = "movile";
+      else
+        document.querySelector("#movile-nav").className = "movile active";
+    });
+  </script>
+  <script>
+    claw.claw_config("js/config.claw");
+    //claw.$include('pages.viajes.*');
+    claw.pageError404(function(){
+      console.log("Esa viaje no existe");
+    });
+    claw.forEach(claw.searchAll("[data-travel]"),function(i, viaje){
+      viaje.addEventListener("click",function(){
+        location.hash = "#/"+viaje.dataset.travel;
+      })
+      claw.page("/"+viaje.dataset.travel, null, function(){
+        claw.search("[data-travel='"+viaje.dataset.travel+"'] > input[type='radio']").checked = true;
+        console.log(viaje.dataset.travel)
+      })
+    });
+  </script>
+</html>
