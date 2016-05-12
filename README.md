@@ -7,3 +7,4 @@ Equipo: WebOS
 
 # Integrantes: (Editen este archivo e incluyan sus nombres completos! :P )
 - Alejandro Hernandez Gomez
+- Santiago Mancera Arturo Samuel
