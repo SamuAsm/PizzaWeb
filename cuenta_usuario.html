@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Planet Pizza</title>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="MobileOptimized" content="true"/>
+    <meta name="handheldFriendly" content="true"/>
+    <link rel="stylesheet" href="css/estilo.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/claw.js"></script>
+    <style>
+      div.sheet-slider {
+        max-width: 100%;
+        max-height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="movile-nav" class="movile"></nav>
+    <header>
+      <div id="header_content">
+        <figure id="logo"> <a href=""><img src="img/logo2.png" alt=""/></a></figure>
+        <nav class="mov">
+          <figure><a href="#" id="nav-button"><img src="img/icons/taxes-menu-icon.png" alt=""/></a></figure>
+        </nav>
+        <nav class="desk">
+          <ul id="nav-content">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Menú</a></li>
+            <li><a href="#">Sucursales</a></li>
+            <li><a href="#">Inicio de sesión</a></li>
+            <li class="important"><a href="#">Carrito </a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="admin-panel">
+      <div id="nav-content" class="admin-panel-nav">
+        <ul>
+            <li>Inicio</li> 
+            <li>Datos Personales</li>
+            <li>Historial de pedidos</li>
+            <li>Cambiar contraseña</li>
+            <li>Salir</li>
+        </ul>
+      </div>
+      <div class="admin-panel-content">
+        <br/><h1>Bienvenido<small>Nombre de usuario</small></h1><br/>
+        <div class="ac-container">
+          <div data-order="9876" class="ac-art">
+            <input id="ac-1" name="accordion-1" type="radio"/>
+            <label for="ac-1"> <span>Último pedido</span><span>tiempo restante: 09:05</span></label>
+            <article>
+              <div class="bloc">
+                <ul><span class="title">Datos Orden</span>
+                  <li><b>::Pizza:: $90</b></li>
+                  <li>Especialidad: Personalizada</li>
+                  <li>Tamaño: Mediana</li>
+                  <li>Cantidad: 1</li>
+                  <li>Tipo masa: Orilla de queso</li>
+                  <li><b>Ingredientes_</b></li>
+                  <li>Mitad 1: Peperoni, Piña</li>
+                  <li>Mitad 2: Champiñones, Carne molida</li><br/>
+                  <li><b>::Pizza2:: $120</b></li>
+                  <li>Especialidad: Peperonicima</li>
+                  <li>Tamaño: Grande</li>
+                  <li>Cantidad: 1</li>
+                  <li>Tipo masa: Orilla de queso</li><br/>
+                  <li><b>::Extras:: </b></li>
+                  <li>1 Cocacola 3 litros $35</li>
+                  <li>1 Papas locas $65</li>
+                  <li>2 Salsa especial $12 </li>
+                </ul>
+              </div>
+              <div class="bloc">
+                <ul> <span class="title">Datos Generales</span>
+                  <li><b>::Puntos acumulados::</b></li>
+                  <li>107p</li><br/>
+                  <li><b>::Fecha pedido::</b>
+                  <li>15/05/2016</li><br/>
+                  <li><b>::Hora pedido::</b></li>
+                  <li>03:34pm</li><br/>
+                  <li><b>::Estado::</b></li>
+                  <li>En Camino</li><br/>
+                  <li><b>::Total::</b>
+                  <li>$380 </li><br/>
+                </ul>
+                <ul> <span class="title">Aviso</span>
+                  <p>El pedido sólo podrá ser cancelado mientras su estado sea "Tomando orden", al llegar al estado "Cocinando" o posteriores no se podrá cancelar.</p>
+                </ul>
+                <button>Cancelar pedido</button>
+              </div>
+            </article>
+          </div>
+      </div>
+    </section>
+   </body>
+</html>
