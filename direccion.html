@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>dirección</title>
+    <meta charset="UTF-8"/>
+    <title>Planet Pizza</title>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="MobileOptimized" content="true"/>
+    <meta name="handheldFriendly" content="true"/>
+    <link rel="stylesheet" href="css/estilo.css"/>
+    <link rel="stylesheet" href="css/estilos.css"/>
+    <script type="text/javascript">
+        function mostrar(){
+            document.getElementById('compra').style.display = 'block';
+            document.getElementById('env1').disabled= true;
+            document.getElementById('env2').disabled= true;
+        }
+    </script>
+	</head>
+    <body>
+        <header>
+            <div id="header_content">
+             <figure id="logo"> <a href=""><img src="img/logo2.png" alt=""/></a></figure>
+               <nav class="mov">
+               <figure><a href="#" id="nav-button"><img src="img/icons/taxes-menu-icon.png" alt=""/></a></figure>
+                </nav>
+              <nav class="desk">
+               <ul id="nav-content">
+                  <li><a href="#">Inicio</a></li>
+                  <li><a href="#">Menú</a></li>
+                    <li><a href="#">Sucursales</a></li>
+                    <li><a href="#">Inicio de sesión</a></li>
+                    <li class="important"><a href="#">Carrito </a></li>
+                  </ul>
+                </nav>
+            </div>
+
+        </header>
+        <section>
+            <div class="direcciones">
+                <div>
+                    <h1>Direcciones</h1>
+                </div>
+                <h2>Direcciones anteriores</h2>
+                <div class="tabla">
+                    <select name="direc">
+                        <option id="d1">Direccion 1</option>
+                        <option id="d2">Direccion 2</option>
+                        <option id="d3">Direccion 3</option>
+                        <option id="d4">Direccion 4</option>
+                    </select>
+                    <div class="enviar">
+                            <input type="button" id="env1" name="Enviar" value="Enviar" onclick="mostrar()"/>
+                    </div>
+                </div>
+                <h2>Agregar una nueva dirección</h2>
+                <div class="ndirec">
+                    <div class="nuevo">
+                            <h3>Calle<input type="text" name="name"></h3>
+                            <h3>Número<input type="text" name="numero"></h3>
+                            <h3>Colonia<input type="text" name="colonia"></h3>
+                            <h3>Ciudad<input type="text" name="ciudad"></h3>
+                            <h3>Estado<input type="text" name="estado"></h3>
+                    <div>
+                    <div class="enviar">
+                            <input type="button" id="env2" name="Enviar" value="Enviar" onclick="mostrar()"/>
+                    </div>
+                </div>
+                <div id="compra">
+                    <p>Compra realizada</p>
+                    <p>Tu pedido llegara en 30 min</p>
+                    <input type="button" name="Aceptar" value="Aceptar" visibility="hidden">
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
