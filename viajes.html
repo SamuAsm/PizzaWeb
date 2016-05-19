@@ -26,15 +26,12 @@
         <nav class="mov">
           <figure><a href="#" id="nav-button"><img src="img/icons/taxes-menu-icon.png" alt=""/></a></figure>
         </nav>
-        <!--nav.desk
-        ul#nav-content
-          li: a(href="#") Inicio
-          li: a(href="#") Menú
-          li: a(href="#") Promociones 
-          li: a(href="#") Paquetes
-          li: a(href="#") Visita el planeta
-          li.important: a(href="#") Hacer un pedido 
-        -->
+        <nav class="desk">
+          <h4>Sucursal Vallejo</h4>
+          <ul id="nav-content">
+            <li>Sucursal vallejo</li>
+          </ul>
+        </nav>
       </div>
     </header>
     <section class="admin-panel">
@@ -72,40 +69,39 @@
             <label for="ac-1"> <span>Viaje #9876</span><span>tiempo restante: 29:42</span></label>
             <article>
               <div class="bloc">
-                <ul><span class="title">Datos Orden</span>
-                  <li><b>::Pizza:: $90</b></li>
-                  <li>Especialidad: Personalizada</li>
-                  <li>Tamaño: Mediana</li>
-                  <li>Cantidad: 1</li>
-                  <li>Tipo masa: Orilla de queso</li>
-                  <li><b>Ingredientes_</b></li>
-                  <li>Mitad 1: Peperoni, Piña</li>
-                  <li>Mitad 2: Champiñones, Carne molida</li><br/>
-                  <li><b>::Pizza2:: $120</b></li>
-                  <li>Especialidad: Peperonicima</li>
-                  <li>Tamaño: Grande</li>
-                  <li>Cantidad: 1</li>
-                  <li>Tipo masa: Orilla de queso</li><br/>
-                  <li><b>::Extras:: </b></li>
-                  <li>1 Cocacola 3 litros $35</li>
-                  <li>1 Papas locas $65</li>
-                  <li>2 Salsa especial $12 </li>
+                <ul><span class="title">Datos Viaje</span>
+                  <li><b>::<a href="#">Orden #621</a>:: $ 150</b></li>
+                  <li><b>Contenido</b></li>
+                  <li>1 Pizzas $100</li>
+                  <li>1 Papas locas $20</li>
+                  <li>1 Refresco Grande</li>
+                  <li><b>Direccion</b></li>
+                  <li>Wilfrido Masseau #123</li><br/>
+                  <li><b>::<a href="#">Orden #623</a>:: $ 150</b></li>
+                  <li><b>Contenido</b></li>
+                  <li>1 Pizzas $100</li>
+                  <li>1 Papas locas $20</li>
+                  <li>1 Refresco Grande</li>
+                  <li><b>Direccion</b></li>
+                  <li>Wilfrido Masseau #123</li><br/>
+                  <li><b>::<a href="#">Orden #621</a>:: $ 150</b></li>
+                  <li><b>Contenido</b></li>
+                  <li>1 Pizzas $100</li>
+                  <li>1 Papas locas $20</li>
+                  <li>1 Refresco Grande</li>
+                  <li><b>Direccion</b></li>
+                  <li>Wilfrido Masseau #123</li>
                 </ul>
               </div>
               <div class="bloc">
                 <ul> <span class="title">Datos Generales</span>
-                  <li>Cliente: Alejandro Hernandez</li>
-                  <li>Correo: alexxh42@gmail.com</li>
-                  <li>Telefono: 55 7643 234 </li>
-                  <li>Direccion: Paseo de la reforma</li>
-                  <li>Puntos acumulados: 140p</li>
-                  <li>No. Pedidos: 10</li>
-                  <li>Estado: Cocinando</li>
-                  <li>Viaje: <a href="#">#650</a></li>
-                  <li>Total: $340 </li>
+                  <li>Repartidor: No asignado (<a href="#">Asignar repartidor</a>)</li>
+                  <li>Estado viaje: En espera</li>
+                  <li>Total en viaje: $450</li>
+                  <li>Dinero en cambio: $500</li>
                 </ul>
-                <ul> <span class="title">Anotaciones</span>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, hic esse architecto ex illum aliquam. Adipisci accusamus sapiente qui, ad dolor repellendus illo veniam. Fuga ad est recusandae blanditiis rem?               </p>
+                <ul> <span class="title">Ruta de viaje</span>
+                  <figure><img src="img/Google-Maps-Chile.gif" alt=""/></figure>
                 </ul>
               </div>
             </article>
@@ -138,7 +134,7 @@
     claw.pageError404(function(){
       console.log("Esa viaje no existe");
     });
-    claw.searchAll("[data-travel]").iterate(function(i, viaje){
+    claw.forEach(claw.searchAll("[data-travel]"),function(i, viaje){
       viaje.addEventListener("click",function(){
         location.hash = "#/"+viaje.dataset.travel;
       })

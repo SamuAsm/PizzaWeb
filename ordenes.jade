@@ -98,6 +98,8 @@ html(lang="es")
                   li Direccion: Paseo de la reforma
                   li Puntos acumulados: 140p
                   li No. Pedidos: 10
+                  li Fecha pedido: 11/05/2016
+                  li Hora pedido: 08:21pm
                   li Estado: Cocinando
                   li Viaje: 
                     a(href="#") #650
@@ -130,7 +132,7 @@ html(lang="es")
     claw.pageError404(function(){
       console.log("Esa orden no existe");
     });
-    claw.searchAll("[data-order]").iterate(function(i, orden){
+    claw.forEach(claw.searchAll("[data-order]"),function(i, orden){
       orden.addEventListener("click",function(){
         location.hash = "#/"+orden.dataset.order;
       })
