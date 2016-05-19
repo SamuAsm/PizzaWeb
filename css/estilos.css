@@ -20,11 +20,11 @@ div.sucursal img{
 	height: 200px;
 	float:left;
 	border-radius: 10%;
-	transition: width 1s, height 1s;
+	transition: all 1s;
+	cursor: pointer;
 }
 div.sucursal img:hover {
-	width: 35%;
-	height: 250px;
+	transform: scale(1.1);
 }
 div.sucursal div.sucur h2{
 	text-align: center;
@@ -56,11 +56,11 @@ div.desc div.imagen img{
 	float:left;
 	border-radius: 20%;
 	padding: 2%;
-	transition: width 1s,height 1s;
+	transition: all 1s;
+	cursor: pointer;
 }
 div.desc div.imagen img:hover{
-	width: 35%;
-	height: 250px;
+	transform: scale(1.1);
 }
 
 div.desc h2 {
